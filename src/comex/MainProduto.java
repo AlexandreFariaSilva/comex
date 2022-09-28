@@ -10,8 +10,7 @@ public class MainProduto {
 	 produto1.setNome("Notebook Samsung");
 	 produto1.setPrecoUnitario(3523.00);
 	 produto1.setQuantidadeEmEstoque(1);
-	 produto1.setCategoriaProduto(new Categoria());
-	 produto1.getCategoriaProduto().setNome("Informatica");
+	 produto1.setCategoriaProduto(new Categoria(3, "informatica", StatusDaCategoria.ATIVADO));
 	 produto1.calculaValorTotalEmEstoque();
 	 produto1.calculaImposto();
 	 
@@ -20,8 +19,7 @@ public class MainProduto {
 	 produto2.setNome("Clean Architecture");
 	 produto2.setPrecoUnitario(102.90);
 	 produto2.setQuantidadeEmEstoque(2);
-	 produto2.setCategoriaProduto(new Categoria());
-	 produto2.getCategoriaProduto().setNome("Livros");
+	 produto2.setCategoriaProduto(new Categoria(3, "informatica", StatusDaCategoria.ATIVADO));
 	 produto2.calculaValorTotalEmEstoque();
 	 produto2.calculaImposto();
 	
@@ -33,8 +31,8 @@ public class MainProduto {
 	 produto3.setNome("Monitor Dell 27");
 	 produto3.setPrecoUnitario(1889.00);
 	 produto3.setQuantidadeEmEstoque(3);
-	 produto3.setCategoriaProduto(new Categoria());
-	 produto3.getCategoriaProduto().setNome("Informatica");
+	 produto3.setCategoriaProduto(new Categoria(3, "informatica", StatusDaCategoria.ATIVADO));
+	 
 	 produto3.calculaImposto();
 	 
 
