@@ -4,7 +4,7 @@ public class MainCategoria {
 
 	public static void main(String[] args) {
 	
-		Categoria categoria1 = new Categoria(3, "INFORMATIC",StatusDaCategoria.DESATIVADO );
+		Categoria categoria1 = new Categoria(3, "INFORMATICA",StatusDaCategoria.DESATIVADO );
 	
 	
 		

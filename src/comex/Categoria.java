@@ -20,12 +20,12 @@ public class Categoria {
 		}
 		if(nome.length() <= 3) {
 			
-			throw new IllegalArgumentException("O nome ta zoado");
+			throw new IllegalArgumentException("É obrigatorio o nome ter mais que 3 caracteres");
 			
 		}
 		if((status != StatusDaCategoria.ATIVADO)&&(status != StatusDaCategoria.DESATIVADO)) {
 			
-			throw new IllegalArgumentException("O status n ta certo irmão");
+			throw new IllegalArgumentException("O status não pode ser outro alem de ATIVADO ou DESATIVADO");
 		}
 		
 		
