@@ -15,6 +15,25 @@ public class Cliente {
 	
 	public Cliente(long id, String nome, String cpf, String telefone, String rua, String numeroEndereco, String complemento, String bairro, String cidade,String estado) {
 		
+		if(id < 0) {
+			throw new IllegalArgumentException("O ID não pode ser menor que 0");
+			
+		}if(nome.length() < 5 ) {
+			throw new IllegalArgumentException("O nome deve conter mais que 5 caracteres ");
+		}if((cpf.length()< 11)|(cpf.length()> 14)) {
+			throw new IllegalAccessError("O CPF não pode conter menos que 11 digitos e não mais que 14");
+		}if(rua.length() < 5) {
+			throw new IllegalArgumentException("O nome da rua deve conter mais que 5 caracteres");
+		}if(numeroEndereco.length() <= 1) {
+			throw new IllegalArgumentException("O numero da rua deve ser maior que 1 caractere");
+		}if(bairro.length() <= 1) {
+			throw new IllegalArgumentException("O bairro deve ter mais que 1 caractere");
+		}if(cidade.length() <= 1) {
+			throw new IllegalArgumentException("A cidade deve ter mais que 1 caractere");
+		}if(estado.length() <= 1) {
+			throw new IllegalArgumentException("O estado deve ter mais que 1 caractere");
+		}
+		
 		this.id = id;
 		this.nome = nome;
 		this.cpf = cpf;
