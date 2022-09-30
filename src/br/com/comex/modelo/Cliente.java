@@ -11,9 +11,9 @@ public class Cliente {
 	private String complemento;
 	private String bairro;
 	private String cidade;
-	private String estado;
+	private Estado estado;
 	
-	public Cliente(long id, String nome, String cpf, String telefone, String rua, String numeroEndereco, String complemento, String bairro, String cidade,String estado) {
+	public Cliente(long id, String nome, String cpf, String telefone, String rua, String numeroEndereco, String complemento, String bairro, String cidade,Estado estado) {
 		
 		if(id < 0) {
 			throw new IllegalArgumentException("O ID não pode ser menor que 0");
@@ -30,8 +30,8 @@ public class Cliente {
 			throw new IllegalArgumentException("O bairro deve ter mais que 1 caractere");
 		}if(cidade.length() <= 1) {
 			throw new IllegalArgumentException("A cidade deve ter mais que 1 caractere");
-		}if(estado.length() <= 1) {
-			throw new IllegalArgumentException("O estado deve ter mais que 1 caractere");
+		}if(estado == null) {
+			throw new IllegalArgumentException("Escolha o estado corretamente");
 		}
 		
 		this.id = id;
@@ -86,9 +86,11 @@ public class Cliente {
 	public String getCidade() {
 		return cidade;
 	}
-	public String getEstado() {
-		return estado;
+
+	public void setEstado(Estado estado) {
+		this.estado = estado;
 	}
+	
 
 	
 
