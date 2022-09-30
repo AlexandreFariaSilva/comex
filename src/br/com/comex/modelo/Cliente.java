@@ -19,7 +19,7 @@ public class Cliente {
 			throw new IllegalArgumentException("O ID não pode ser menor que 0");
 			
 		}if(nome.length() < 5 ) {
-			throw new IllegalArgumentException("O nome deve conter mais que 5 caracteres ");
+			throw new ComexException("O nome deve conter mais que 5 caracteres ");
 		}if((cpf.length()< 11)|(cpf.length()> 14)) {
 			throw new IllegalAccessError("O CPF não pode conter menos que 11 digitos e não mais que 14");
 		}if(rua.length() < 5) {

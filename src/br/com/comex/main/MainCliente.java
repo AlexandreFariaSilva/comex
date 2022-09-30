@@ -6,7 +6,7 @@ public class MainCliente {
 
 	public static void main(String[] args) {
 		try {
-		Cliente cliente1 = new Cliente(1, "Anagabriela", "111111111111", "997470909", "arnoldo golf", "42", "apartamento 2", "santa candida", "curitiba", "PR");
+		Cliente cliente1 = new Cliente(1, "Ana", "111111111111", "997470909", "arnoldo golf", "42", "apartamento 2", "santa candida", "curitiba", "PR");
 		cliente1.imprimeCliente();
 		Cliente cliente2 = new Cliente(2, "Eliezer", "088080808080", "999999999", "ar", "01", "sobrado", "santa felicidade", "pato branco", "PR");
 		cliente2.imprimeCliente();
