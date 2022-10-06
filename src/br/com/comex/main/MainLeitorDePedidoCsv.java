@@ -5,6 +5,7 @@ import java.util.List;
 
 import br.com.comex.csv.LeitorPedidosCsv;
 import br.com.comex.csv.PedidoCsv;
+import br.com.comex.csv.TotalProdutosVendidos;
 
 public class MainLeitorDePedidoCsv {
 
@@ -16,7 +17,9 @@ public class MainLeitorDePedidoCsv {
 	leitorPedidosCsv.leituraPedidosCsv();
 	System.out.println("O total de pedidos é: " + pedidoCsv.size());
 	
+	TotalProdutosVendidos totalDeProdutos = new TotalProdutosVendidos();
+	totalDeProdutos.totalDeProdutosVendidos(pedidoCsv);
+	
+
 	}
-
-
-}
+	}
