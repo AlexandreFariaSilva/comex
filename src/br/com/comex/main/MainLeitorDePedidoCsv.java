@@ -4,7 +4,9 @@ import java.io.FileNotFoundException;
 import java.util.List;
 
 import br.com.comex.csv.LeitorPedidosCsv;
+import br.com.comex.csv.MontanteTotalVendas;
 import br.com.comex.csv.PedidoCsv;
+import br.com.comex.csv.TotalCategorias;
 import br.com.comex.csv.TotalProdutosVendidos;
 
 public class MainLeitorDePedidoCsv {
@@ -19,6 +21,12 @@ public class MainLeitorDePedidoCsv {
 	
 	TotalProdutosVendidos totalDeProdutos = new TotalProdutosVendidos();
 	totalDeProdutos.totalDeProdutosVendidos(pedidoCsv);
+	
+	TotalCategorias totalCategoria = new TotalCategorias();
+	totalCategoria.totalDeCategorias(pedidoCsv);
+	
+	MontanteTotalVendas totalVendas = new MontanteTotalVendas();
+	totalVendas.montanteTotalDeVendas(pedidoCsv);
 	
 
 	}
