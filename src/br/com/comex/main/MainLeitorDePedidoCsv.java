@@ -22,9 +22,11 @@ public class MainLeitorDePedidoCsv {
 	TotalProdutosVendidos totalDeProdutos = new TotalProdutosVendidos();
 	totalDeProdutos.totalDeProdutosVendidos(pedidoCsv);
 	
+	//Calulando total de categorias distintas do pedidos.csv
 	TotalCategorias totalCategoria = new TotalCategorias();
 	totalCategoria.totalDeCategorias(pedidoCsv);
 	
+	//Montante total de Vendas do pedidos.csv
 	MontanteTotalVendas totalVendas = new MontanteTotalVendas();
 	totalVendas.montanteTotalDeVendas(pedidoCsv);
 	
