@@ -24,7 +24,7 @@ public class ProdutoIsento extends Produto{
 			throw new IllegalArgumentException("A categoria não pode ser nula");
 			
 		}
-		this.idProduto = idProduto;
+		
 		this.categoriaProduto = categoriaProduto;
 		this.nome = nome;
 		this.precoUnitario = precoUnitario;

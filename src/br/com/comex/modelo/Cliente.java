@@ -2,7 +2,7 @@ package br.com.comex.modelo;
 
 public class Cliente {
 	
-	private long id;
+	private Integer id;
 	private String nome;
 	private String cpf;
 	private String telefone;
@@ -13,12 +13,13 @@ public class Cliente {
 	private String cidade;
 	private Estado estado;
 	
-	public Cliente(long id, String nome, String cpf, String telefone, String rua, String numeroEndereco, String complemento, String bairro, String cidade,Estado estado) {
+	public Cliente(String nome, String cpf, String telefone, String rua, String numeroEndereco, String complemento, String bairro, String cidade,Estado estado) {
 		
-		if(id < 0) {
-			throw new IllegalArgumentException("O ID não pode ser menor que 0");
+		//if(id < 0) {
+		//	throw new IllegalArgumentException("O ID não pode ser menor que 0");
 			
-		}if(nome.length() < 5 ) {
+//}
+	if(nome.length() < 5 ) {
 			throw new ComexException("O nome deve conter mais que 5 caracteres ");
 		}if((cpf.length()< 11)|(cpf.length()> 14)) {
 			throw new IllegalAccessError("O CPF não pode conter menos que 11 digitos e não mais que 14");
@@ -34,7 +35,7 @@ public class Cliente {
 			throw new IllegalArgumentException("Escolha o estado corretamente");
 		}
 		
-		this.id = id;
+
 		this.nome = nome;
 		this.cpf = cpf;
 		this.telefone = telefone;
@@ -51,6 +52,10 @@ public class Cliente {
 		
 	}
 	
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	public void imprimeCliente() {
 		
 		System.out.println("\nDados do cliente: " +"\nNumero do cadastro: " + id + "\nNome cliente: "  + nome + "\nCPF: " + cpf + "\nTelefone: " + telefone + "\nRua: " + rua + "\nNumero do Endereco: "+ numeroEndereco + "\nComplemento: " + complemento + "\nBairro: " + bairro + "\nCidade: " + cidade + "\nEstado: " + estado);
@@ -59,7 +64,7 @@ public class Cliente {
 	}
 	
 	
-	public long getId() {
+	public int getId() {
 		return id;
 	}
 	public String getNome() {
@@ -91,6 +96,17 @@ public class Cliente {
 		this.estado = estado;
 	}
 	
+	public Estado getEstado() {
+		return estado;
+	}
+	public String getEstadoString() {
+		return String.format("%s", getEstado());
+	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return  String.format("O Cliente criado foi : %d, %s, %s", this.id,this.nome, this.cidade);
+	}
 
 	
 

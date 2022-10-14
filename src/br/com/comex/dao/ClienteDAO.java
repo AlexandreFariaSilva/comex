@@ -11,11 +11,13 @@ import br.com.comex.modelo.Cliente;
 import br.com.comex.modelo.Estado;
 
 public class ClienteDAO {
-private Connection connection;
+
+	private Connection connection;
 	
 	public ClienteDAO(Connection connection) {
 		this.connection = connection;
 	}
+	
 	public void inserir (Cliente cliente) throws SQLException {
 		
 		String sql = "insert into comex.cliente (nome, cpf, telefone, rua, numero, complemento, bairro, cidade, uf) "
@@ -90,4 +92,28 @@ private Connection connection;
 			pstm.execute();
 		
 	}
+		
+		public Cliente buscaPorId(Integer id) throws SQLException{
+			String sql = "select * from comex.cliente where id = ?";
+			PreparedStatement pstm = connection.prepareStatement(sql);
+			pstm.setInt(1, id);
+			
+			ResultSet reg = pstm.executeQuery();
+			
+			if(reg.next()) {
+				Cliente cliente = new Cliente(reg.getString("nome"),
+						reg.getString("cpf"),
+						reg.getString("telefone"),
+						reg.getString("rua"),
+						reg.getString("numero"),
+						reg.getString("complemento"),
+						reg.getString("bairro"),
+						reg.getString("cidade"),
+					 Estado.valueOf(reg.getString("uf")));
+				cliente.setId(reg.getInt("id"));
+				return cliente;
+			}
+			return null;
+		}
+
 }

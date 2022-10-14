@@ -78,6 +78,5 @@ public class CategoriaDAO {
 		pstm.execute();
 		
 	}		
-
 	
 }

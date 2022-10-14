@@ -22,7 +22,6 @@ public class TotalCategorias {
 		System.out.println("As Categorias distintas são: " + totalCategorias.size());
 		return totalCategorias.size();
 		
-
 	}
 		
 }

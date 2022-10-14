@@ -7,15 +7,15 @@ public class MainCategoria {
 
 	public static void main(String[] args) {
 	
-		Categoria categoria1 = new Categoria(3, "INFORMATICA",StatusDaCategoria.DESATIVADO );
+		Categoria categoria1 = new Categoria("INFORMATICA",StatusDaCategoria.INATIVA );
 	
 	
 		
-		Categoria categoria2 = new Categoria(1, "Moveis",StatusDaCategoria.ATIVADO);
+		Categoria categoria2 = new Categoria( "Moveis",StatusDaCategoria.ATIVA);
 	
 		
 		
-		Categoria categoria3 = new Categoria(2, "livros",StatusDaCategoria.ATIVADO );
+		Categoria categoria3 = new Categoria( "livros",StatusDaCategoria.ATIVA );
 	
 		
 		

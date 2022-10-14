@@ -26,6 +26,6 @@ public enum Estado {
 	SC,
 	SP,
 	SE,
-	TO;
+	TO, PR;
 
 }

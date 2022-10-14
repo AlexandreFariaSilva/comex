@@ -1,14 +1,15 @@
 package br.com.comex.main;
 
 import br.com.comex.modelo.Cliente;
+import br.com.comex.modelo.Estado;
 import br.com.comex.modelo.ItemPedido;
 
 public class MainItemPedido {
 	
 	public static void main(String[] args) {
 		//Produto itemcomprado = new Produto();
-		Cliente clientePedido1 = new Cliente(1, "Ana", "077161949411", "997470909", "arnoldo golf", "42", "apartamento 2", "santa candida", "curitiba", "PR");
-		ItemPedido pedidoDeProduto1 = new ItemPedido(11, "QUANTIDADE", 1 );
+		Cliente clientePedido1 = new Cliente( "Ana", "077161949411", "997470909", "arnoldo golf", "42", "apartamento 2", "santa candida", "curitiba", Estado.RO);
+		ItemPedido pedidoDeProduto1 = new ItemPedido(11, 0, 0, "QUANTIDADE", 1 );
 		
 		pedidoDeProduto1.setNome("Notebook Dell 28'");
 		pedidoDeProduto1.setPrecoUnitario(1550.0);
@@ -21,8 +22,8 @@ public class MainItemPedido {
 		System.out.println("---------------------------------------------------------------------------------------");
 	
 	
-		Cliente clientePedido2 = new Cliente(1, "Rogerio", "077161949411", "997470909", "arnoldo golf", "42", "CASA", "santa candida", "Natal", "SC");
-		ItemPedido pedidoDeProduto2 = new ItemPedido(4, "PROMOCAO", 1 );
+		Cliente clientePedido2 = new Cliente( "Rogerio", "077161949411", "997470909", "arnoldo golf", "42", "CASA", "santa candida", "Natal", Estado.SP);
+		ItemPedido pedidoDeProduto2 = new ItemPedido(4, 0, 0, "PROMOCAO", 1 );
 		
 		pedidoDeProduto2.setNome("LIVRO ANTROPOLOGICO");
 		pedidoDeProduto2.setPrecoUnitario(15.0);
@@ -34,8 +35,8 @@ public class MainItemPedido {
 		System.out.println("Seu desconto total é: " + pedidoDeProduto2.calculaDesconto());
 		System.out.println("---------------------------------------------------------------------------------------");
 	
-		Cliente clientePedido3 = new Cliente(1, "Claudio", "077161949411", "997470909", "arnoldo golf", "42", "apartamento 2", "santa candida", "curitiba", "PR");
-		ItemPedido pedidoDeProduto3 = new ItemPedido(4, "NENHUM", 3 );
+		Cliente clientePedido3 = new Cliente( "Claudio", "077161949411", "997470909", "arnoldo golf", "42", "apartamento 2", "santa candida", "curitiba", Estado.MG);
+		ItemPedido pedidoDeProduto3 = new ItemPedido(4, 0, 0, "NENHUM", 3 );
 		
 		pedidoDeProduto3.setNome("MESA GAMER");
 		pedidoDeProduto3.setPrecoUnitario(1000.0);

@@ -8,18 +8,21 @@ public class ItemPedido extends Produto{
 	private long idDoPedido;
 	private double desconto;
 	private String tipoDoDesconto;
+	private double precoUnitario;
+	private long idDoProduto;
+	
+	
 	
 
 	
-	public ItemPedido(int quantidadeDoPedido, String tipoDoDesconto, long idDoPedido ) {
+	public ItemPedido(double precoUnitario,long idDoProduto,int quantidadeDoPedido, String tipoDoDesconto, long idDoPedido ) {
 		
 		id = ++count;
 		this.quantidadeDoPedido = quantidadeDoPedido;
 		this.tipoDoDesconto = tipoDoDesconto;
 		this.idDoPedido = idDoPedido;
-		
+		this.idDoProduto = idDoProduto;
 	
-		
 		
 	}
 	
@@ -69,6 +72,48 @@ public class ItemPedido extends Produto{
 
 	public String getTipoDoDesconto() {
 		return tipoDoDesconto;
+	}
+
+	public double getPrecoUnitario() {
+		return precoUnitario;
+	}
+
+	public long getIdDoProduto() {
+		return idDoProduto;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public void setQuantidadeDoPedido(int quantidadeDoPedido) {
+		this.quantidadeDoPedido = quantidadeDoPedido;
+	}
+
+	public void setIdDoPedido(long idDoPedido) {
+		this.idDoPedido = idDoPedido;
+	}
+
+	public void setDesconto(double desconto) {
+		this.desconto = desconto;
+	}
+
+	public void setTipoDoDesconto(String tipoDoDesconto) {
+		this.tipoDoDesconto = tipoDoDesconto;
+	}
+
+	public void setPrecoUnitario(double precoUnitario) {
+		this.precoUnitario = precoUnitario;
+	}
+
+	public void setIdDoProduto(long idDoProduto) {
+		this.idDoProduto = idDoProduto;
+	}
+
+	@Override
+	public String toString() {
+		return "ItemPedido [id=" + id + ", quantidadeDoPedido=" + quantidadeDoPedido + ", idDoPedido=" + idDoPedido
+				+ ", desconto=" + desconto + ", tipoDoDesconto=" + tipoDoDesconto + "]";
 	}
 	
 	
