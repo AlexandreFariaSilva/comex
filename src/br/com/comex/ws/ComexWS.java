@@ -24,5 +24,20 @@ public class ComexWS {
 		return listaDeCategoria;
 		
 	}
+	
+	public Categoria adicionarCategoria(Categoria categoria) throws SQLException {
+		
+		Connection connection = new ConnectionFactory().recuperarConexao();
+		//CategoriaDAO categoriaDao = new CategoriaDAO(connection);
+		
+		new CategoriaDAO(connection).inserir(categoria);
+		
+		return categoria;
+		
+	}
+	
+
+	
+
 
 }
