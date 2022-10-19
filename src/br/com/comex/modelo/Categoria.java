@@ -1,10 +1,19 @@
 package br.com.comex.modelo;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+
 public class Categoria {
 	private static long count = 0;
 	private Integer id;
 	private String nome;
 	private StatusDaCategoria status;
+	
+	public Categoria() {
+		
+	}
+	
 
 	public Categoria(String nome, StatusDaCategoria status ) {
 		id = (int) ++count;
