@@ -72,8 +72,7 @@ public class ClienteDAO {
 					reg.getString("complemento"),
 					reg.getString("bairro"),
 					reg.getString("cidade"),
-				 Estado.valueOf(reg.getString("uf")));
-			cliente.setId(reg.getInt("id"));
+					Estado.valueOf(reg.getString("uf")));
 			clientes.add(cliente);
 		}
 		return clientes;
@@ -109,7 +108,7 @@ public class ClienteDAO {
 						reg.getString("complemento"),
 						reg.getString("bairro"),
 						reg.getString("cidade"),
-					 Estado.valueOf(reg.getString("uf")));
+						Estado.valueOf(reg.getString("uf")));
 				cliente.setId(reg.getInt("id"));
 				return cliente;
 			}

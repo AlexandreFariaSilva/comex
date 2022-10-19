@@ -12,7 +12,7 @@ public class RemocaoCliente {
 		Connection connection = new ConnectionFactory().recuperarConexao();
 		ClienteDAO clienteDao = new ClienteDAO(connection);
 		
-		clienteDao.deletar(9);
+		clienteDao.deletar(8);
 		
 		connection.close();
 	}

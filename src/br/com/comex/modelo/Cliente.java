@@ -13,13 +13,13 @@ public class Cliente {
 	private String cidade;
 	private Estado estado;
 	
-	public Cliente(String nome, String cpf, String telefone, String rua, String numeroEndereco, String complemento, String bairro, String cidade,Estado estado) {
+	public Cliente(String nome, String cpf, String telefone, String rua, String numeroEndereco, String complemento, String bairro, String cidade, Estado estado) {
 		
 		//if(id < 0) {
 		//	throw new IllegalArgumentException("O ID não pode ser menor que 0");
 			
 //}
-	if(nome.length() < 5 ) {
+		if(nome.length() < 5 ) {
 			throw new ComexException("O nome deve conter mais que 5 caracteres ");
 		}if((cpf.length()< 11)|(cpf.length()> 14)) {
 			throw new IllegalAccessError("O CPF não pode conter menos que 11 digitos e não mais que 14");
@@ -31,11 +31,12 @@ public class Cliente {
 			throw new IllegalArgumentException("O bairro deve ter mais que 1 caractere");
 		}if(cidade.length() <= 1) {
 			throw new IllegalArgumentException("A cidade deve ter mais que 1 caractere");
-		}if(estado == null) {
-			throw new IllegalArgumentException("Escolha o estado corretamente");
+		//}if(estado == null) {
+		//	throw new IllegalArgumentException("Escolha o estado corretamente");
 		}
+	
 		
-
+		this.estado = estado;
 		this.nome = nome;
 		this.cpf = cpf;
 		this.telefone = telefone;
@@ -44,7 +45,8 @@ public class Cliente {
 		this.complemento = complemento;
 		this.bairro = bairro;
 		this.cidade = cidade;
-		this.estado = estado;
+		
+		
 		
 		
 		//System.out.println("\nDados do cliente: " +"\nNumero do cadastro: " + id + "\nNome cliente: "  + nome + "\nCPF: " + cpf + "\nTelefone: " + telefone + "\nRua: " + rua + "\nNumero do Endereco: "+ numeroEndereco + "\nComplemento: " + complemento + "\nBairro: " + bairro + "\nCidade: " + cidade + "\nEstado: " + estado);
@@ -52,6 +54,38 @@ public class Cliente {
 		
 	}
 	
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+
+	public void setRua(String rua) {
+		this.rua = rua;
+	}
+
+	public void setNumeroEndereco(String numeroEndereco) {
+		this.numeroEndereco = numeroEndereco;
+	}
+
+	public void setComplemento(String complemento) {
+		this.complemento = complemento;
+	}
+
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}

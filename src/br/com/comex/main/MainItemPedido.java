@@ -8,7 +8,7 @@ public class MainItemPedido {
 	
 	public static void main(String[] args) {
 		//Produto itemcomprado = new Produto();
-		Cliente clientePedido1 = new Cliente( "Ana", "077161949411", "997470909", "arnoldo golf", "42", "apartamento 2", "santa candida", "curitiba", Estado.RO);
+		Cliente clientePedido1 = new Cliente( "Ana", "077161949411", "997470909", "arnoldo golf", "42", "apartamento 2", "santa candida", "curitiba",Estado.MG);
 		ItemPedido pedidoDeProduto1 = new ItemPedido(11, 0, 0, "QUANTIDADE", 1 );
 		
 		pedidoDeProduto1.setNome("Notebook Dell 28'");
@@ -22,7 +22,7 @@ public class MainItemPedido {
 		System.out.println("---------------------------------------------------------------------------------------");
 	
 	
-		Cliente clientePedido2 = new Cliente( "Rogerio", "077161949411", "997470909", "arnoldo golf", "42", "CASA", "santa candida", "Natal", Estado.SP);
+		Cliente clientePedido2 = new Cliente( "Rogerio", "077161949411", "997470909", "arnoldo golf", "42", "CASA", "santa candida", "Natal",Estado.MG);
 		ItemPedido pedidoDeProduto2 = new ItemPedido(4, 0, 0, "PROMOCAO", 1 );
 		
 		pedidoDeProduto2.setNome("LIVRO ANTROPOLOGICO");
@@ -35,7 +35,7 @@ public class MainItemPedido {
 		System.out.println("Seu desconto total é: " + pedidoDeProduto2.calculaDesconto());
 		System.out.println("---------------------------------------------------------------------------------------");
 	
-		Cliente clientePedido3 = new Cliente( "Claudio", "077161949411", "997470909", "arnoldo golf", "42", "apartamento 2", "santa candida", "curitiba", Estado.MG);
+		Cliente clientePedido3 = new Cliente( "Claudio", "077161949411", "997470909", "arnoldo golf", "42", "apartamento 2", "santa candida", "curitiba",Estado.MG);
 		ItemPedido pedidoDeProduto3 = new ItemPedido(4, 0, 0, "NENHUM", 3 );
 		
 		pedidoDeProduto3.setNome("MESA GAMER");

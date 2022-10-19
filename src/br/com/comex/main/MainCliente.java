@@ -7,11 +7,11 @@ public class MainCliente {
 
 	public static void main(String[] args) {
 		try {
-		Cliente cliente1 = new Cliente( "Anasdasd", "111111111111", "997470909", "arnoldo golf", "42", "apartamento 2", "santa candida", "curitiba", Estado.ES);
+		Cliente cliente1 = new Cliente( "Anasdasd", "111111111111", "997470909", "arnoldo golf", "42", "apartamento 2", "santa candida", "curitiba",Estado.PR);
 		cliente1.imprimeCliente();
-		Cliente cliente2 = new Cliente("Eliezer", "088080808080", "999999999", "aroldinho", "01", "sobrado", "santa felicidade", "pato branco",null);
+		Cliente cliente2 = new Cliente("Eliezer", "088080808080", "999999999", "aroldinho", "01", "sobrado", "santa felicidade", "pato branco", Estado.MG);
 		cliente2.imprimeCliente();
-		Cliente cliente3 = new Cliente( "Gabriela", "0909001111122", "1111111111", "arnoldo futebol", "164", "casinha", "santa monica", "pato invisivel", Estado.AM);
+		Cliente cliente3 = new Cliente( "Gabriela", "0909001111122", "1111111111", "arnoldo futebol", "164", "casinha", "santa monica", "pato invisivel", Estado.ES);
 		cliente3.imprimeCliente();
 		}catch(IllegalArgumentException ex) {
 			System.out.println("segue o erro: " + ex.getMessage());

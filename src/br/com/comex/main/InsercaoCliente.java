@@ -11,7 +11,10 @@ import br.com.comex.modelo.Estado;
 public class InsercaoCliente {
 
 	public static void main(String[] args) throws SQLException {
-		Cliente cliente = new Cliente("Pedro", "677.777.888-44", "41997470913", "tibagi", "321", "apartamento 2", "Santa Felicidade", "Curitiba", Estado.PR);
+		Cliente cliente = new Cliente("Joaquim", "677.777.888-44", 
+				"41997470913", 
+				"tibagi", 
+				"321", "apartamento 2", "Santa Felicidade", "Curitiba", Estado.PR);
 		
 		Connection connection = new ConnectionFactory().recuperarConexao();
 		ClienteDAO clienteDao = new ClienteDAO(connection);
