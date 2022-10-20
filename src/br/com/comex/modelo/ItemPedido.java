@@ -1,6 +1,6 @@
 package br.com.comex.modelo;
 
-public class ItemPedido extends Produto{
+public class ItemPedido {
 	
 	private static long count = 0;
 	private long id;
