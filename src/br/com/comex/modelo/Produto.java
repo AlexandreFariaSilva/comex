@@ -18,7 +18,7 @@ public class Produto {
 		idProduto = ++count;
 		
 	}
-	public Produto ( String nome, String descricao ,double precoUnitario, int quantidadeEmestoque , String tipo)  {
+	public Produto ( String nome, String descricao ,double precoUnitario, int quantidadeEmestoque , String tipo, Integer idCategoria)  {
 	//	if (idProduto <= 0) {		
 		//	throw new IllegalArgumentException("O numero do ID deve ser maior que 0");
 		//	
@@ -47,6 +47,7 @@ public class Produto {
 		this.precoUnitario = precoUnitario;
 		this.quantidadeEmEstoque = quantidadeEmestoque;
 		this.tipo = tipo;
+		this.idCategoria = idCategoria;
 		
 	}
 	

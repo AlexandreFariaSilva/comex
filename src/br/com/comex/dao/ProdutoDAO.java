@@ -19,7 +19,10 @@ private Connection connection;
 	
 	public void inserir (Produto produto) throws SQLException{
 		
-		String sql = "insert into comex.produto (nome, descricao, preco_unitario, quantidade_estoque, categoria_id, tipo) values (?,?,?,?,?,?)";
+		String sql = "insert into comex.produto (nome, descricao, "
+				+ "preco_unitario, "
+				+ "quantidade_estoque, "
+				+ "categoria_id, tipo) values (?,?,?,?,?,?)";
 	
 		String[] colunaParaRetornar = { "id" };
 		
@@ -28,7 +31,7 @@ private Connection connection;
 		pstm.setString(2, produto.getDescricao());
 		pstm.setDouble(3, produto.getPrecoUnitario());
 		pstm.setInt(4, produto.getQuantidadeEmEstoque());
-		pstm.setLong(5, 14);
+		pstm.setLong(5, produto.getIdCategoria());
 		pstm.setString(6, produto.getTipo());
 	
 		pstm.execute();
@@ -62,7 +65,8 @@ private Connection connection;
 		
 		while(reg.next()) {
 			Produto produto = new Produto(reg.getString("nome"), reg.getString("descricao"),reg.getDouble("preco_unitario")
-					,reg.getInt("quantidade_estoque"), reg.getString("tipo"));
+					,reg.getInt("quantidade_estoque"), reg.getString("tipo")
+					,reg.getInt("categoria_id"));
 			produto.setIdProduto(reg.getInt("id"));
 			produtos.add(produto);
 		}
