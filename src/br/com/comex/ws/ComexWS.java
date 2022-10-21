@@ -10,9 +10,11 @@ import javax.jws.WebService;
 
 import br.com.comex.dao.CategoriaDAO;
 import br.com.comex.dao.ClienteDAO;
+import br.com.comex.dao.ProdutoDAO;
 import br.com.comex.modelo.Categoria;
 import br.com.comex.modelo.Cliente;
 import br.com.comex.modelo.ConnectionFactory;
+import br.com.comex.modelo.Produto;
 
 @WebService
 
@@ -49,6 +51,25 @@ public class ComexWS {
 		return listaDeCliente;
 		
 	}
+	
+	public Cliente adicionarCliente(Cliente cliente) throws SQLException {
+		
+		Connection connection = new ConnectionFactory().recuperarConexao();
+		//CategoriaDAO categoriaDao = new CategoriaDAO(connection);
+		
+		new ClienteDAO(connection).inserir(cliente);
+		
+		return cliente;
+		
+	}
+	
+	public List<Produto> getProduto() throws SQLException{
+		
+		ProdutoDAO produtoDao = new ProdutoDAO(connection);
+		List<Produto> listaDeProduto = produtoDao.listaTodas();
 
+		return listaDeProduto;
+		
+	}
 
 }

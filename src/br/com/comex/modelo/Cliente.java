@@ -13,6 +13,10 @@ public class Cliente {
 	private String cidade;
 	private Estado estado;
 	
+	public Cliente() {
+		
+	}
+	
 	public Cliente(String nome, String cpf, String telefone, String rua, String numeroEndereco, String complemento, String bairro, String cidade, Estado estado) {
 		
 		//if(id < 0) {
