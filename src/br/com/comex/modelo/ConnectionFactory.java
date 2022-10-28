@@ -9,7 +9,7 @@ public class ConnectionFactory {
 	public Connection recuperarConexao() {
 		
 		try {
-			return DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","comex", "comex");
+			return DriverManager.getConnection("jdbc:oracle:thin:172.17.0.2:1522:xe","system", "admin");
 			
 		}catch (SQLException e) {
 			throw new RuntimeException(e);

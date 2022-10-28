@@ -9,7 +9,7 @@ public class MainComexWS {
 
 	public static void main(String[] args) {
 		
-		String url = "http://localhost:8080/ComexWS?wsdl";
+		String url = "http://0.0.0.0:8080/ComexWS?wsdl";
 		System.out.println("Categoria no ar");
 		Endpoint.publish(url, new ComexWS());
 		
